@@ -1,5 +1,4 @@
 //> using lib "com.lihaoyi::os-lib:0.9.0"
-import java.awt.print.Paper
 
 enum Move {
   case Rock, Paper, Scissor
@@ -52,15 +51,6 @@ def allPoints(rounds: List[(Move, Move)]): Int = {
   rounds.map( (opp, self) => roundPoints(opp, self) + self.ordinal + 1 ).foldLeft(0)(_ + _)
 }
 
-def part1 = {
-  val points = allPoints(parseInput(parseSuggestedMove))
-  println(s"Part 1: ${points}")
-}
+println(s"Part 1: ${allPoints(parseInput(parseSuggestedMove))}")
+println(s"Part 2: ${allPoints(parseInput(parseSuggestedOutcome))}")
 
-def part2 = {
-  val points = allPoints(parseInput(parseSuggestedOutcome))
-  println(s"Part 2: ${points}")
-}
-
-part1
-part2

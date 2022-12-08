@@ -5,13 +5,5 @@ def parseInput: List[Int] = {
   in.split("\n\n").map(bag => bag.split("\n").map(Integer.parseInt).foldLeft(0)(_ + _)).toList
 }
 
-def part1 = {
-  println(s"Part 1: ${parseInput.max}")
-}
-
-def part2 = {
-  println(s"Part 2: ${parseInput.sorted(summon[Ordering[Int]].reverse).take(3).reduce(_ + _)}")
-}
-
-part1
-part2
+println(s"Part 1: ${parseInput.max}")
+println(s"Part 2: ${parseInput.sorted(summon[Ordering[Int]].reverse).take(3).reduce(_ + _)}")
