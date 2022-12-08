@@ -13,8 +13,5 @@ def part2 = {
   println(s"Part 2: ${parseInput.sorted(summon[Ordering[Int]].reverse).take(3).reduce(_ + _)}")
 }
 
-@main
-def main = {
-  part1
-  part2
-}
+part1
+part2
