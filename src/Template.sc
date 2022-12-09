@@ -13,8 +13,8 @@ def part2(path: String) = {
   ???
 }
 
-// assert(part1("tests") == ???)
-// assert(part2("tests") == ???)
+// assert(part1("tests") == )
+// assert(part2("tests") == )
 
 // println(s"Part 1: ${part1("inputs")}")
 // println(s"Part 2: ${part2("inputs")}")
